@@ -1,0 +1,130 @@
+/* Importa a fonte Montserrat do Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+/* --- PALETA DE CORES --- */
+/* Fundo Principal: #4B3280 (Roxo Escuro) */
+/* Destaque Principal: #D6285A (Vermelho Vibrante) */
+/* Texto/Fundo Secundário: #FDFBEE (Creme/Bege) */
+
+/* --- RESET & FUNDO GERAL --- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FDFBEE; 
+}
+
+/* --- ESTILIZAÇÃO PADRÃO DE TEXTO --- */
+
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    /* Texto dos Links e Botões será claro */
+    color: #FDFBEE; 
+    text-decoration: none;
+    background-color: transparent; 
+}
+
+/* --- CABEÇALHO (HEADER) --- */
+
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px 5%; 
+    background-color: #4B3280;
+}
+
+.logo{
+    height: 40px; 
+    width: auto;
+}
+
+/* --- LINKS DE NAVEGAÇÃO (TRANSFORMADOS EM BOTÕES) --- */
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    margin-right: auto;
+    margin-left: 50px; 
+}
+
+/* Estiliza o LINK (<a>) para parecer um botão 3D */
+.nav_links li a {
+    display: block; 
+    padding: 8px 15px;
+    border-radius: 8px; 
+    background-color: #4B3280; 
+    transition: all 0.2s ease;
+    
+}
+
+/* Efeito ao passar o mouse */
+.nav_links li a:hover {
+    color: #FDFBEE; 
+    background-color: rgb(54, 38, 95);
+}
+
+/* Efeito ao clicar (botão pressionado) */
+.nav_links li a:active {
+    transform: translateY(4px); 
+    box-shadow: 0 0px 0 0 rgba(0, 0, 0, 0.4); 
+}
+
+.nav_links li {
+    padding: 0px 10px; 
+    background-color: transparent; 
+}
+
+/* --- GRUPO DE BOTÕES DE AÇÃO --- */
+
+.button-group {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+/* Garante que o link que envolve o botão seja transparente */
+.cta, .login-btn {
+    background-color: transparent; 
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 700; 
+}
+
+/* 1. BOTÃO SECUNDÁRIO: Login */
+.login-btn button {
+    background-color: transparent; 
+    border: 2px solid #D6285A; 
+    color: #D6285A; 
+}
+
+.login-btn button:hover {
+    background-color: #D6285A; 
+    color: #FDFBEE; 
+}
+
+/* 2. BOTÃO PRINCIPAL: Create Account */
+.cta button {
+    background-color: #D6285A; 
+    color: #FDFBEE; 
+    box-shadow: 0 2px 5px rgba(214, 40, 90, 0.5); 
+}
+
+.cta button:hover {
+    background-color: #A9204A; 
+    box-shadow: 0 4px 8px rgba(214, 40, 90, 0.6);
+}
